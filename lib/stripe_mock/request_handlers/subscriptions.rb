@@ -133,6 +133,10 @@ module StripeMock
           end
         end
 
+        if params[:trial_from_plan]
+          subscription.status = 'trialing'
+        end
+
         subscriptions[subscription[:id]] = subscription
         add_subscription_to_customer(customer, subscription)
 
