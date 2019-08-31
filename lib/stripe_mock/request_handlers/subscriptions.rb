@@ -134,7 +134,7 @@ module StripeMock
         end
 
         if params[:trial_from_plan]
-          subscription.status = 'trialing'
+          subscription[:status] = 'trialing'
         end
 
         subscriptions[subscription[:id]] = subscription
